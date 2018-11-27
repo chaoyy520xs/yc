@@ -1,0 +1,114 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+	修改一下路径
+	<property name="PATH" value="/usr/local/logs"></property>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%thread] [%-5level] --%mdc{client}%msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <appender name="TRACE_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/trace.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>logs/trace.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <layout>
+            <pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%thread] [%-5level] [%logger:%line]--%mdc{client} %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>logs/info.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <layout>
+            <pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%thread] [%-5level] [%logger:%line]--%mdc{client} %msg%n</pattern>
+        </layout>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="DEBUG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/debug.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>logs/debug.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <layout>
+            <pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%thread] [%-5level] [%logger:%line]--%mdc{client} %msg%n</pattern>
+        </layout>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+
+    <appender name="WARN_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/warn.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>logs/warn.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <layout>
+            <pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%thread] [%-5level] [%logger:%line]--%mdc{client} %msg%n</pattern>
+        </layout>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+
+
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>logs/error.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <layout>
+            <pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%thread] [%-5level] [%logger:%line]--%mdc{client} %msg%n</pattern>
+        </layout>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <root level="TRACE">
+        <appender-ref ref="TRACE_FILE" />
+        <appender-ref ref="INFO_FILE" />
+        <appender-ref ref="DEBUG_FILE" />
+        <appender-ref ref="WARN_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+    在控制台会输出日志 
+    
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root> 
+		
+		日志异步到数据库
+		<appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
+		&lt;!&ndash;日志异步到数据库 &ndash;&gt;
+		<connectionSource class="ch.qos.logback.core.db.DriverManagerConnectionSource">
+		&lt;!&ndash;连接池 &ndash;&gt;
+		<dataSource class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<driverClass>com.mysql.jdbc.Driver</driverClass>
+		<url>jdbc:mysql://127.0.0.1:3306/databaseName</url>
+		<user>root</user>
+		<password>root</password>
+		</dataSource>
+		</connectionSource>
+		</appender>	
+</configuration> -->
+	
+	
+	
